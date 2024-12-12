@@ -1,3 +1,9 @@
+# title: Vortexion
+# author: Adam
+# desc: A MSX/SG-1000 inspired shoot-em-up
+# site: https://github.com/helpcomputer/vortexion
+# license: MIT
+# version: 1.0
 
 import pyxel as px
 from game import Game
