@@ -25,17 +25,21 @@ class Input:
     
         # pressing
         if px.btn(px.KEY_UP) or px.btn(px.KEY_W) or \
-            px.btn(px.GAMEPAD1_BUTTON_DPAD_UP):
+            px.btn(px.GAMEPAD1_BUTTON_DPAD_UP) or \
+            px.btnv(px.GAMEPAD1_AXIS_LEFTY) < -1024:
             self.pressing.append(UP)
         elif px.btn(px.KEY_DOWN) or px.btn(px.KEY_S) or \
-            px.btn(px.GAMEPAD1_BUTTON_DPAD_DOWN):
+            px.btn(px.GAMEPAD1_BUTTON_DPAD_DOWN) or \
+            px.btnv(px.GAMEPAD1_AXIS_LEFTY) > 1024:
             self.pressing.append(DOWN)
             
         if px.btn(px.KEY_LEFT) or px.btn(px.KEY_A) or \
-            px.btn(px.GAMEPAD1_BUTTON_DPAD_LEFT):
+            px.btn(px.GAMEPAD1_BUTTON_DPAD_LEFT) or \
+            px.btnv(px.GAMEPAD1_AXIS_LEFTX) < -1024:
             self.pressing.append(LEFT)
         elif px.btn(px.KEY_RIGHT) or px.btn(px.KEY_D) or \
-            px.btn(px.GAMEPAD1_BUTTON_DPAD_RIGHT):
+            px.btn(px.GAMEPAD1_BUTTON_DPAD_RIGHT) or \
+            px.btnv(px.GAMEPAD1_AXIS_LEFTX) > 1024:
             self.pressing.append(RIGHT)
         
         if px.btn(px.KEY_Z) or px.btn(px.KEY_U) or \
